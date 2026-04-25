@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ilSwaryperfumes / موج و الحص</title>
+    <style>
+        body {
+            background: 
+                linear-gradient(to bottom, 
+                    rgba(135, 206, 235, 0.4) 0%,
+                    rgba(135, 206, 235, 0.3) 30%,
+                    rgba(0, 105, 148, 0.5) 50%,
+                    rgba(194, 178, 128, 0.6) 70%,
+                    rgba(210, 180, 140, 0.8) 100%
+                ),
+                url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920') center/cover;
+            color: #fff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            animation: beachMove 20s linear infinite;
+        }
+        @keyframes beachMove {
+            from { background-position: center 0; }
+            to { background-position: center -100px; }
+        }
+        .perfume-box {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 64, 64, 0.85);
+            border-radius: 14px;
+            box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.25);
+            padding: 14px 18px;
+            z-index: 1000;
+            border: 2px solid #20b2aa;
+            text-align: center;
+        }
+        .perfume-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-family: 'Cairo', 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(90deg, #20b2aa, #fff, #008080);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .perfume-arabic {
+            font-size: 1.1rem;
+            margin-top: 6px;
+            font-family: 'Cairo', 'Segoe UI', Arial, sans-serif;
+            letter-spacing: 1px;
+            background: linear-gradient(90deg, #fff, #20b2aa, #008080);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .products-row {
+            display: flex;
+            flex-direction: row;
+            gap: 32px;
+            margin: 100px 0 0 32px;
+        }
+        .product-box {
+            background: rgba(0, 64, 64, 0.92);
+            border-radius: 16px;
+            box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.25);
+            padding: 24px 18px 18px 18px;
+            max-width: 270px;
+            text-align: center;
+            border: 2px solid #20b2aa;
+            min-width: 200px;
+        }
+        .product-img {
+            width: 100%;
+            max-width: 210px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+            margin-bottom: 18px;
+            border: 3px solid;
+            border-image: linear-gradient(135deg, #20b2aa, #008080, #40e0d0) 1;
+            filter: saturate(1.1) contrast(1.05);
+        }
+        .product-name {
+            font-size: 1.5rem;
+            font-family: 'Cairo', 'Segoe UI', Arial, sans-serif;
+            margin-bottom: 10px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #fff;
+            background: linear-gradient(90deg, #20b2aa, #fff, #008080);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+        }
+        .price-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .old-price {
+            font-size: 1.1rem;
+            color: #ffb3b3;
+            text-decoration: line-through;
+            font-weight: 500;
+        }
+        .new-price {
+            font-size: 1.2rem;
+            color: #aaffc3;
+            font-weight: bold;
+            background: linear-gradient(90deg, #fff, #20b2aa, #008080);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    .buy-btn {
+        display: inline-block;
+        margin-top: 18px;
+        padding: 12px 36px;
+        background: linear-gradient(90deg, #20b2aa, #008080);
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.2s;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+    .buy-btn:hover {
+        background: linear-gradient(90deg, #008080, #20b2aa);
+        transform: translateY(-2px) scale(1.04);
+    }
+    </style>
+    <!-- Google Fonts for Arabic and modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="perfume-box">
+        <div class="perfume-title">ilSwaryperfumes</div>
+        <div class="perfume-arabic">موج و الحص</div>
+    </div>
+    <div class="products-row">
+        <div class="product-box">
+            <div class="product-name">موج</div>
+            <img class="product-img" src="WhatsApp Image 2026-04-23 at 7.35.48 PM (1).jpeg" alt="ilSwaryperfumes موج">
+            <div class="price-row">
+                <span class="old-price">150</span>
+                <span class="new-price">120 AED</span>
+            </div>
+            <button class="buy-btn" onclick="window.open('#', '_blank')">Buy</button>
+        </div>
+        <div class="product-box">
+            <div class="product-name">الحص</div>
+            <img class="product-img" src="WhatsApp Image 2026-04-23 at 7.35.48 PM.jpeg" alt="ilSwaryperfumes الحص">
+            <div class="price-row">
+                <span class="old-price">150</span>
+                <span class="new-price">120 AED</span>
+            </div>
+            <button class="buy-btn" onclick="window.open('#', '_blank')">Buy</button>
+        </div>
+    </div>
+</body>
+</html>
